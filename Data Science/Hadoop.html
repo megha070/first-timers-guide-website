@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Hadoop</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    </head>
+    <body>
+        <h1> What is Big Data ?</h1>
+        <p>
+                Any piece of information can be considered as data and thus it can be of various sizes.
+                The data size today is increasing tremendously and thus to process and manage such huge volume of data, different Big Data technologies comes into play.
+                <br>
+                The Big Data consits of the 5V's as follows:-
+                <ol>
+                <li> Volume</li>
+                <li> Variety</li>
+                <li> Velocity</li>
+                <li>Value</li>
+                <li> Veracity</li>
+                </ol>
+        </p>
+        <h1>Problems Faced with Big Data</h1>
+        <ol>
+                The problems with Big Data are as follows :-
+                <li> Storage.</li>
+                <li> Processing data having complex structure.</li>
+                <li> Bringing huge amount of data to computation until becomes a bottleneck.</li>
+                
+        </ol>
+        <h1> Hadoop - A Solution to Problems of Big Data </h1>
+        <ol>
+                Hadoop is a framework that allows you to store and process huge data in parallel and distributed fashion. Hadoop has the following  two components:-
+            <li><b>HDFS(storage)</b></li>
+            It allows to dump any kind of data across the cluster.It is a distributed file system .It divides input data into smaller chunks and store it.It stores any kind of data and no schema validation is done while dumping the data,that is whenever you dump data you do not need to specify a schema for it.
+            <li><b>MapReduce(Processing)</b></li>
+            It allows parallel  processing of the data stored in HDFS.It is basically a software framework which helps in writing applications that processes large data sets using distributed and parallel algorithms inside hadoop enviornment.It consists of two parts as folows:-<br>
+  <b> Map part</b>-A block of data is read and processed to produce a key value pair.<br>
+  <b>Reduce part</b> -The output of the Map job is the input to the Reduce part.It recieves these key value pairs from multiple map jobs and it aggregates these intermediate key value pairs as a final output.
+        </ol>
+    </body>
+</html>

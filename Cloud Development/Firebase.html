@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Firebase</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    </head>
+    <body>
+        <h1>Firebase</h1>
+     <p>
+            <a href="https://firebase.google.com">Firebase</a> is a development platform owned by Google (formerly known as Firebase, Inc. acquired in 2014)
+             that enables programmers to build web and mobile applications faster. It is comprised of many functionalities such as:
+     </p>   
+     <ul>
+         <li> <a href="https://firebase.google.com/products/storage/"><b>Cloud Storage</b></a> to simply serve resources like videos and photos.</li>
+         <li><a href="https://firebase.google.com/products/hosting/"><b>Hosting</b></a> to deliver web assets easily by deploying static files (HTML, CSS, JS);</li>
+         <li><a href="https://firebase.google.com/products/functions/"><b>Cloud Functions</b></a> to run server side code hassle-free.</li>
+        </ul>
+        For further details about their many other functionalities such as their user engagement tools (analytics, invites and so on)
+        , please follow this <a href="https://firebase.google.com/products/">link</a>.
+
+        <h2> Install and develop with the <a href="https://firebase.google.com/docs/cli/">Firebase Client</a> locally:</h2>
+    <ol>
+        <li> <a href="https://nodejs.org/en/download/"><b>Node Js</b></a> must be installed first.</li>
+        <li> Second, open a <b>command prompt</b> and run 'npm i -g firebase-tools' (Patience will help for this step as there are lots of node modules being downloaded...).</li>
+        <li>Afterwards, by running this command: `firebase login`, you can log in to your Google account to access your Google projects (Email + password of the Google account).</li>
+        <li> Next, run `firebase init` in a project folder of your choice to start developing.</li>
+        <li> Use `firebase serve` to test the project locally <a href="https://ngrok.com/download"><b>ngrok</b></a> shall come in handy to expose your local instance to the Web with HTTP tunnelling).</li>
+        <li> Finally, once you're done tinkering with your app, `firebase deploy` can be used to push your changes to Google's servers.</li>
+    </ol>
+    <h2>There are 3 pricing plans:</h2>
+    <ul>
+        <li> <b>Spark Plan</b> which is mainly used for testing purposes and external network calls are disabled.</li>
+        <li> <b>Flame Plan</b> is a monthly fee plan with capped services.</li>
+        <li><b>Blaze Plan</b> is a "pay-as-you-go" plan without any capping on use and allows several databases per project unlike the other plans.</li>
+    </ul>
+    </body>
+</html>
