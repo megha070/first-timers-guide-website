@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Docker</title>
+        <meta  http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    </head>
+    <body>
+        <h1>Docker</h1>
+        <h2>Overview</h2>
+        <p>
+            Docker is used by developers pretty much everywhere now, and chances are you will require it if you plan to contribute to Open Source. This article aims at introducing Docker in the simplest way possible. 
+        </p>
+        <h2>Need for Docker</h2>
+        <p>
+            Why do developers need Docker? <br>
+Before Docker was introduced, there used to be major discrepancies when a developer's code was deployed in production, which was essentially caused due to difference in computing environments. This led to wastage of a lot of time and effort. 
+Also, organizations which worked on microservice architecture found it very costly to develop their software because each microservice would require a different Virtual Machine to run on top of the base OS. This caused a lot of wastage of resources such as RAM, processor and disk space. 
+</p>
+<h2>How does Docker work? </h2>
+<p>
+    Docker deploys a separate <i>container</i> for <b>each</b> microservice on top of a <b>single</b> Virtual Machine. Actually, Docker containers are lightweight alternatives to Virtual Machines. One important thing to note here is that you do not need 
+    to pre-allocate any RAM to any of the containers; each container allocates as much RAM as that microservice requires, to itself.
+</p>
+<h2>Docker Workflow</h2>
+<p>
+    
+The developer writes code into an easy-to-write Docker file. This Docker file creates an <i>image</i>. Containers are just run-time instances of these Docker images. The image is pushed to Docker hub, an online repository from which others can pull them and set up the containers in their own machines. 
+</p>
+    </body>
+</html>
