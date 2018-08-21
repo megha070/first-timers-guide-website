@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>MVC</title>
+    </head>
+    <body>
+            <h2 id="whatismvc">What is MVC?</h2>
+
+            <p><a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"><strong>MVC</strong></a> is an architectural pattern commonly used for developing user interfaces that divides an application into three components viz <strong>Model</strong>, <strong>View</strong> &amp; <strong>Controller</strong>.</p>
+            
+            <p><img src="https://i2.wp.com/pbiswas101.files.wordpress.com/2018/07/mvc.png?ssl=1&amp;w=450" alt="" /></p>
+            
+            <ul>
+            <li><strong>Model</strong> represents business logic &amp; maintains the data of the application.</li>
+            
+            <li><strong>View</strong> displays the application’s user interface using the model data.</li>
+            
+            <li><strong>Controller</strong> handles the user request &amp; renders the appropriate view with the model data as a response.</li>
+            </ul>
+            
+            <h2 id="sowhatmvcreallyis">So... What MVC really is!</h2>
+            
+            <p>Let us consider implementing MVC in Game Development. So, how about designing a game where 2 players fight in a combat where each one has a <strong>Strike</strong> &amp; a <strong>Life</strong> bar. Now, if one player attacks, then the opponent's <strong>Life</strong> decrements by 1 unit. When <strong>Life</strong> equals 0, the player dies! The question is how do we develop this simple game with MVC paradigm.</p>
+            
+            <p>Now, almost every game has three basic elements - </p>
+            
+            <ul>
+            <li><strong>State</strong> (Model?)</li>
+            
+            <li><strong>Interface</strong> (View?)</li>
+            
+            <li><strong>Gameplay</strong> (Controller?)</li>
+            </ul>
+            
+            <p>It seems intuitive enough that for each iteration of the game a state must be preserved. Also, when we talk about the state it means a data-model. Gameplay enables specific ways in which players interact with a game &amp; that can be addressed by a controller object which updates the interface for every state as present in the model. By the way, the game view takes care of the visual interface.</p>
+            
+            <p>Let us consider, <strong>Model</strong> holds an initial state in which both players' <strong>Strike</strong> &amp; <strong>Life</strong> counts are equal to 0 &amp; 10 respectively!</p>
+            
+            <ul>
+            <li>1st Iteration: Player1 strikes Player2, now <strong>Controller</strong> uses the <strong>Model</strong> object to alter the state of the game in which Player1 has <strong>Strike</strong> count 1 &amp; Player2 has <strong>Life</strong> count 9! Ultimately <strong>View</strong> updates the UI with this newly generated data from the <strong>Model</strong> with the help of <strong>Controller</strong>.</li>
+            
+            <li>2nd Iteration: ...</li>
+            
+            <li>3rd Iteration: ...
+            .
+            .
+            .
+            And the game ends with having <strong>Controller</strong> either reset the game or exit it depending on user request. (<strong>SPOILER</strong>: PLayer2 Wins!)</li>
+            </ul>
+            
+            <p>This was nothing but a trivial example as for how to implement MVC architecture into an application!</p>
+            
+            <h2 id="butwhymvc">But... Why MVC?</h2>
+            
+            <p>The fundamental reason for adopting MVC principles into a development workflow is to have <strong>seperation of concerns</strong>. Well, during traditional approach of programming, the code was written into a single file which creates lack of maintainability, testability as well as scalability of the application. With MVC, you create applications that separate the different aspects of the application while providing a loose coupling between these elements.</p>
+            
+            <h6 id="pros">Pros</h6>
+            
+            <p>MVC encourages simultaneous development  from  multiple developers because of the separation of responsibilities which in turn increases the scalability of the product. The very nature of the MVC architecture is such that there is low coupling among models, views or controllers.</p>
+            
+            <h6 id="cons">Cons</h6>
+            
+            <p>MVC design navigation can be complex because it introduces new layers of abstraction. So, decomposing a feature into three components causes scattering. Thus, requiring developers to maintain the consistency of multiple representations at once!</p>
+    </body>
+</html>

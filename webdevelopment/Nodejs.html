@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>NODE</title>
+    </head>
+    <body>
+            <h1 id="nodejs">Node Js</h1>
+
+            <h2 id="whatisnodejs">What is Node JS?</h2>
+            
+            <p><strong>Node</strong> JS is a runtime based on <strong>Chrome's</strong> V8 engine. People often confuse it with a framework or a language. But it's neither of them. Originally written by <strong><a href="https://en.wikipedia.org/wiki/Ryan_Dahl">Ryan Dhal</a></strong> and later developed by <strong><a href="https://www.joyent.com/node-js/support">Joyent, Inc</a></strong> was after 13 years of introduction to server-side programming using Javascript. What Ryan does is, he took out Chrome's V8 engine and wrapped it inside a C++ program.
+            Node JS has the world's largest package ecosystem called <strong><a href="https://npmjs.org">npm</a></strong>. NPM is a package manager built for using packages developed by other developers in a project. There are other package managers too. for example, yarn.</p>
+            
+            <h2 id="outoftheboxmodules"><em>Out of the Box</em> modules</h2>
+            
+            <p>Node JS comes with a few modules pre-installed. Here I am listing a few.</p>
+            
+            <p><code>http</code>: http module is used to create http servers.</p>
+            
+            <p><code>path</code>: As the name suggests, it's used for working with 'path'</p>
+            
+            <p><code>os</code>: OS module is used to get the information of the system where we are running our app.</p>
+            
+            <p>So, these are a few modules with which you will work too frequently. Node JS isn't just limited in this modules. Using NPM or YARN, you can install a lot of modules and use them in your project.</p>
+            
+            <h2 id="frameworks">Frameworks</h2>
+            
+            <p>Node JS comes with a lot of back-end frameworks. For example, for creating servers we will use <strong><a href="https://expressjs.com">Express.js</a></strong> which is a framework for handling back-end tasks like routing etc. Express was built by <strong>TJ Holowaychuk</strong> who is one of the members of the core Node JS team.
+            There are lots of other frameworks as well. Like <strong>Hapi.js</strong> for building APIs.</p>
+            
+            <h2 id="creatinghttpserver">Creating <code>http</code> server</h2>
+            
+            <p>So, now we are gonna create our http server using the basic http module which ships with Node JS. And then we will create another server using Express JS.</p>
+            
+            <h3 id="httpserver">http server</h3>
+            
+            <pre><code class="javascript language-javascript">const http = require('http');
+            
+            http.createServer(function (req, res) {
+              res.write('Hello World!');
+              res.end();
+            }).listen(8080);
+            </code></pre>
+            
+            <p>Here, first, we required <code>http</code> module. Then we create a server object, <code>http.createServer</code>. createServer accepts a callback function which again accepts two arguments called <code>req, res</code>.
+            <code>res</code> allows us to call another method 'write' using which we can write to the browser.
+            At last, we are calling <code>listen()</code> to enable our app to listen to the port we specify.
+            So, this is how we create an http server using the default http module.</p>
+            
+            <h3 id="expressserver">express server</h3>
+            
+            <pre><code class="javascript language-javascript">const express = require('express');
+            const app = express();
+            
+            app.get('/', (req, res) =&gt; {
+                res.send('Hello World!');
+            });
+            
+            app.listen(3000);
+            </code></pre>
+            
+            <p>First, install <code>express</code> using <code>npm install express</code> in your working directory or <code>npm instal -g express</code> for installing globally. <code>require()</code> it using <code>require()</code>. Now we have to call <code>express()</code> in another constant called <code>app</code>(or whatever you wanna name it). <code>app</code> gives us a method called <code>get</code> which performs a get request in a URL. <code>get</code> requires at least two parameters to work correctly, a path where it will perform get req and a callback function. Again callback function accepts two arguments <code>req</code> and <code>res</code>. req gives us a method called <code>send</code> which enables us to send data to the requested URL. Finally, we call <code>listen()</code> for listening to a specific port.</p>
+            
+            <p>So, this is how we create a basic server in Node Js.</p>
+    </body>
+</html>

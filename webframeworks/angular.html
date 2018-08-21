@@ -1,0 +1,76 @@
+<html>
+    <head>
+<title>ANGULAR.js</title>
+    </head>
+    <body>
+            <h1>Angular</h1> 
+
+            <p>Angular is a Javascript framework that is used to build client side applications. It is Developed & Maintained by Google.
+            It is mainly used for Single Page Application SPAs, where the whole page doesn't reload again and again to generate the view.
+            Angular make use of Typescript language, which is a superscript of javascript (.ts).
+            As per now the latest version is Angular6. Google team has decided to upgrade the version twice a year.</p>
+            
+            <h2>Why Angular?</h2> 
+            <ul>
+            <li>Angular follows modular approach.</li>
+            <li>It uses making of components which can be reusable.</li>
+            <li> Angular allow Quicker and fast Development (using routings, templates and other features)</li>
+            <li>Angular can help in unit testing of code easily</li>.</ul>
+             
+            
+            <h3>Prerequisites</h3>
+              HTML, CSS , JS, TypeScript
+            
+            <h2>Angular Installation</h2>
+            <p>
+                For any Angular Project You will need few things installed on your machine beforehand. These are:- 
+             <ul><li>Node.js</li>  
+             <li>Npm</li> 
+             <li>Angular CLI - It is a command line interface which can be used to perform different operations 
+                 To install angular CLI write- `npm install -g @angular/cli`</p>
+            </li> </ul>
+                
+            <h3>Create Angular Project</h3> 
+            <pre>Follow these commands in you terminal
+             * `ng new my_app_name`  // it creates all the neccessary files for angular project.
+             * `cd my_app_name`
+             * `ng serve`           	// runs the server default on http://localhost:4200</pre>
+            
+             
+             
+            <h3>Building Blocks</h3> 
+            <pre>There are few main building blocks in Angular.
+               * <b>Modules-</b> 
+                  These actually seperates our application logic and are used by app to manage feature area.
+                  There is atleast one module in every angular app - rootModule called as AppModule.
+            
+               * <b>Components-</b>
+                   Components are the class which interacts with templates and generate logic or data for the view.
+                   There is atleast one component in Angular - AppComponent
+               * <b>Templates -</b>
+                   Templates are used by components to render the output on browser. It Defines the UI with HTML
+               * <b>Metadata -</b>
+                   It tells how to process a class depending on decorators.
+                   Decorators are defined by angular they starts with `@` . They describe behaviour of the class.
+                   e.g @Component -> it means this class will be a component
+               * <b>Data Binding - </b>
+                   Data Binding is used by component and templates to exchange data. 
+                   If in template anywhere the value of a variable(firstName) changes, it will automatically detected by component and vice-versa.
+               * <b>Directives -</b>
+                  These are angular attributes used for rendering in a specific way.
+                  There are some predefined directives like ngIf, ngClass.
+                  E.g If you want to loop through array use ngFor directive
+               * <b>Services -</b>
+                  These seperate business logic of Application. eg- fetch data from server.
+                  It's good practice to maintain business logic in service class.
+               * <b>Dependency Injection -</b>
+                  They are used by components to inject services.
+                  It is done with the use of a constructor.
+                  Before creating service, we have to specify that this service is injectable with decorator `@Injectable()`</pre>
+             
+               
+             Learning these will help you to get a firm understanding of angular. 
+             To know more about them Follow<a href="https://angular.io/guide/architecture">this</a> 
+            
+    </body>
+</html>

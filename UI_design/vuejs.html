@@ -1,0 +1,132 @@
+<HTML>
+    <HEAD>
+        <TITLE>VUE JS</TITLE>
+    </HEAD>
+    <BODY>
+            <h2 id="vuejs">Vue.js</h2>
+
+            <h2 id="whatisvuematerial">## What is Vue Material? </h2>
+            
+            <p>Vue Material is the integration of Vue JS, an open source javascript framework, and Material Design specifications, together which can be used to build beautiful user interfaces. </p>
+            
+            <p>The official documentation can be found <a href="https://vuematerial.io/">here</a>. </p>
+            
+            <p>Vue Material offers a wide range components, UI elements, and themes which can be used in our applications.</p>
+            
+            <h2 id="vuematerialfeatures">## Vue Material Features</h2>
+            
+            <ul>
+            <li>Responsive - adapts to screen size and orientation</li>
+            
+            <li>Event Handling - does some action when an event is triggered. This can be done using v-on.</li>
+            
+            <li>CSS - allows to add styles and transitions to all components and divisions </li>
+            
+            <li>Directives - reactively apply special effects to the DOM using v-for, v-if, and v-show</li>
+            
+            <li>Filters - apply common text formatting</li>
+            </ul>
+            
+            <h2 id="vuejspreferenceoverotherjsframeworks">## Vue JS preference over other JS Frameworks</h2>
+            
+            <p>1.Clear documentation and syntax - the <a href="https://vuejs.org/v2/guide/">Vue JS guide</a> is extremely well-documented and helpful.</p>
+            
+            <p>2.Vue JS has separate sections for template, script, and styles, all in the same file. </p>
+            
+            <p>3.Vue JS has better readability - Eg: inside the script tag, we have a data() function to declare all the variables, a methods: {} object to define all methods, etc.</p>
+            
+            <p>4.Vue is fairly new and is growing as a community.</p>
+            
+            <h2 id="installation">## Installation</h2>
+            
+            <p>Vue Material may be installed via NPM or Yarn by running the following command in terminal:</p>
+            
+            <pre><code class="javascript language-javascript">$ npm install vue-material --save &lt;br&gt;
+            OR &lt;br&gt;
+            $ yarn add vue-material
+            </code></pre>
+            
+            <h2 id="usage">## Usage</h2>
+            
+            <p>Once installed, Vue Material can be used in a project by including the statements:</p>
+            
+            <pre><code class="javascript language-javascript">import VueMaterial from 'vue-material' &lt;br&gt;
+            import 'vue-material/dist/vue-material.css'
+            
+            Vue.use(VueMaterial)
+            </code></pre>
+            
+            <p>To run a Vue Material project locally, navigate to the project folder in terminal and run: </p>
+            
+            <pre><code class="javascript language-javascript">$ npm run dev
+            </code></pre>
+            
+            <p></p>
+            
+            <p>Open <strong>localhost:8080</strong></p>
+            
+            <h2 id="example">## Example</h2>
+            
+            <h3 id="asimpleexampletodemonstratetheuseofvuematerial">A simple example to demonstrate the use of Vue Material</h3>
+            
+            <p>1.Refer <a href="https://sultaness.github.io/vue-material-app.html">this</a> step by step article to set up a Vue Material Project.</p>
+            
+            <p>2.Once a project is set up, navigate to <em>src/App.vue</em> file and replace the content inside <strong>div</strong> tag with: </p>
+            
+            <pre><code class="javascript language-javascript">&lt;md-button class="md-raised md-primary" v-on:click="showCount"&gt; Click me &lt;/md-button&gt;
+            &lt;p&gt; {{ message }}&lt;/p&gt;
+            </code></pre>
+            
+            <p>The Vue Material component we are using here is Button. The button has an event <code>v-on:click</code> which directs to a function <code>showCount</code> defined inside the script tag.</p>
+            
+            <p>The <code>&lt;p&gt;</code> tag displays the message which gets modified inside <code>showCount</code> function.</p>
+            
+            <p>3.Replace the contents inside the <strong>script</strong> tag with: </p>
+            
+            <pre><code class="javascript language-javascript">   export default {
+                   name: 'App',
+                   data () {
+                  return {
+                   count: 1,
+                   message: ''
+                  }
+                },
+                 methods: {
+                  showCount() {
+                   if(this.count==1) {
+                      this.message = `This button has been clicked once!`;
+                      this.count++;
+                  }
+                   else
+                this.message = `This button has been clicked ${this.count++} times!`;
+                }
+               }
+             }
+            </code></pre>
+            
+            <p>The variables <code>count</code> and <code>message</code> are declared in a return statement inside <code>data()</code> function. </p>
+            
+            <p>The method <code>showCount</code> is defined inside <code>methods : {}</code> object like all methods should be.</p>
+            
+            <p>4.You may style the button using CSS. Including the following CSS class inside <code>&lt;style&gt;</code> tag changes button color to Royal Blue on click, and the text color to White. </p>
+            
+            <pre><code class="javascript  language-javascript ">.md-button:focus {
+            background: #4169e1;
+            color: #fff;
+            }
+            </code></pre>
+            
+            <p>5.If you want to view the complete project, you can do so <a href="https://github.com/Sultaness/Simple-VueMaterial-demonstration">here</a>.</p>
+            
+            <h2 id="wantmoreexamples">Want more examples?</h2>
+            
+            <p>Check these out!
+            <br></p>
+            
+            <ul>
+            <li><a href="https://github.com/Sultaness/Todo-List-using-Vue-Material-">Todo list</a></li>
+            
+            <li><a href="https://github.com/Sultaness/Cryptocurrency-Tracker">Cryptocurrency tracker</a></li>
+            </ul>
+    </BODY>
+</HTML>

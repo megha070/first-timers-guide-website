@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>SVN</title>
+    </head>
+    <body>
+            <h1 id="svn">SVN</h1>
+
+            <h2 id="whatissvn">What is SVN?</h2>
+            
+            <p>SVN, which stands for <em>SubVersioN</em>, is a version control system developed and owned by apache. Its official name is Apache's SubVersion. So, SVN is basically a piece of software for managing projects among different users. Just like GitHub, to work with SVN, you have to host your projects somewhere remotely. The project directory in a remote place is known as the repository.
+            SVN is available on Windows, Linux and OSX as well. For installing it in Linux, simply run the command <code>apt-get install svn</code>(on Debian based distros) or <code>yum install svn</code>(for Fedora) or <code>pacman -S svn</code>(Arch and Arch based distros). In OSX, you can install it using homebrew. Make sure to use sudo if you aren't rooted.</p>
+            
+            <h2 id="basicsvncommands">Basic SVN Commands</h2>
+            
+            <p><code>svn co &lt;repo&gt; dir-name</code> : Command to pull data from the remote repository</p>
+            
+            <p><code>svn add</code>: Command used to add files. For eg, svn add 'filename.txt'</p>
+            
+            <p><code>svn commit</code>: Command for committing the files which user have added earlier using 'svn add' command</p>
+            
+            <p><code>svn update</code>: When it's time for publishing the local changes to the remote repository, use 'svn update' to publish it</p>
+            
+            <p><code>svn mkdir &lt;repo&gt;/dir_name</code>: To create a directory in remote repository</p>
+            
+            <p><code>svn list</code>: to list the current directories in a working copy</p>
+            
+            <p><code>svn status</code>: for showing the current status of the working copy</p>
+            
+            <p><code>svn delete PATH</code>: to delete a directory or a file </p>
+            
+            <h2 id="howtostartansvnproject">How to start an SVN project</h2>
+            
+            <p>After the arrival of git, svn's popularity decreased significantly. Nowadays, there is little to no use for svn.
+            Here I am going to show you how to start an svn project and start working on it.</p>
+            
+            <p><strong><em>PS: I will use a free repository from <a href="https://riouxsvn.com">RioUXsvn</a>. You can use this hosting provider too for practising svn. It's 100% free.</em></strong></p>
+            
+            <p>First, we will get the repository link for cloning the repository in our local system. An svn directory on a local machine is called <em>working copy</em>. A repository link of Riouxsvn would look similar to this URL https://svn.riouxsvn.com/test12345-abdus/ (<em>abdus</em> is my name, BTW)</p>
+            
+            <p>Now we've got our URL. It's time to clone the repository. We will use the following command.</p>
+            
+            <pre><code class="bash language-bash">svn co https://svn.riouxsvn.com/test12345-abdus/ awesome_dir
+            </code></pre>
+            
+            <p>You can use checkout instead of co. Both would work similarly.
+            Here, first, we are cloning the repository content and saving it in a new directory called <code>awesome_dir</code>. If you don't provide a directory name, svn will use your repository name as a new directory name.</p>
+            
+            <p>By now, we have cloned our project locally. Now cd into it.</p>
+            
+            <pre><code class="bash language-bash">cd awesome_dir
+            </code></pre>
+            
+            <p>Add some files to it. Here I am adding a new file called 'hello.txt' and adding content 'hello world'</p>
+            
+            <pre><code class="bash language-bash">echo 'hello world' &gt; hello.txt
+            </code></pre>
+            
+            <p>Now if you run <code>svn status</code>, you will see something like this</p>
+            
+            <pre><code class="bash language-bash">?       hello.txt
+            </code></pre>
+            
+            <p>Here, <code>?</code> means it's not added yet. To add a file, we have to execute the command</p>
+            
+            <pre><code class="bash language-bash">svn add hello.txt
+            </code></pre>
+            
+            <p>This will add hello.txt for commit. And the output will be,</p>
+            
+            <pre><code class="bash language-bash">A         hello.txt
+            </code></pre>
+            
+            <p><code>A</code> stands for Added.</p>
+            
+            <p>Now it's time to commit our changes. To commit your changes, run</p>
+            
+            <pre><code class="bash language-bash">svn commit -m "Added hello.txt"
+            </code></pre>
+            
+            <p>And we will get the following output</p>
+            
+            <pre><code class="bash language-bash">Adding         hello.txt
+            Transmitting file data .done
+            Committing transaction...
+            Committed revision 0.
+            </code></pre>
+            
+            <p>Yoo!! We just committed our first change. Now your working copy is ready to be published to the remote repository. To do so, type</p>
+            
+            <pre><code class="bash language-bash">svn update
+            </code></pre>
+            
+            <p>And enter your credentials when asked. You are done.</p>
+            
+            <h2 id="gitvssvn">git VS svn</h2>
+            
+            <p>Let's compare <code>git</code> commands to svn <code>svn</code> commands</p>
+            
+            <p>| <code>git</code>                       | <code>svn</code>            |
+            |:--------------------------|:---------------|
+            | <code>git clone &lt;repo&gt;</code>          | <code>svn co &lt;repo&gt;</code> |
+            | <code>git add .</code>                 | <code>svn add *</code> <em>(wildcard for adding all un-added files)</em>
+            | <code>git commit -m "Message"</code>   | <code>svn commit -m "Message"</code>
+            | <code>git push</code>                  | <code>svn update</code>
+            | <code>git pull</code>                  | <code>svn update</code>
+            | <code>git status</code>                | <code>svn status</code> <br />
+            | <code>git log</code>                   | <code>svn log</code></p>  
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>PROTOTYPAL INHERITANCE</title>
+    </head>
+    <body>
+            <h1 id="objectorientedprogramming">Object Oriented Programming</h1>
+
+            <p>Before we dive into the details of <a href="https://en.wikipedia.org/wiki/Prototype-based_programming"><strong>Prototypal Inheritance</strong></a>, let us first talk about <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-Oriented Programming</a> in the context of good old <a href="https://en.wikipedia.org/wiki/Class-based_programming">Classical Inheritance</a>. In class-based OOP, <strong>inheritance</strong> is the mechanism of basing an object or class upon another class retaining the same implementation.</p>
+            
+            <h6 id="whatdowemeanbyclass">What do we mean by 'Class'?</h6>
+            
+            <ul>
+            <li>An extensible program-code-template for creating objects, providing initial values for state (properties) and implementations of behavior (methods).</li>
+            </ul>
+            
+            <h6 id="whatdowemeanbyobject">What do we mean by 'Object'?</h6>
+            
+            <ul>
+            <li>A variable, a data structure, a function, or a method as long as it represents a value in memory referenced by an identifier.</li>
+            </ul>
+            
+            <p>In case of <strong>class-based inheritance</strong>, each instances (or objects) gets a copy of all the properties &amp; methods during instantiation! The imminent drawback in this inheritance model arises in the form of following:</p>
+            
+            <ul>
+            <li>tight coupling problem</li>
+            
+            <li>fragile base class problem</li>
+            
+            <li>inflexible hierarchy problem</li>
+            
+            <li>duplication by necessity problem</li>
+            </ul>
+            
+            <p>To sum it up, I would say that a class is like a blueprint  of the object to be created. Classes inherit from other classes and create subclass relationships.</p>
+            
+            <p><img src="https://i1.wp.com/pbiswas101.files.wordpress.com/2018/07/inheritance-2.png?ssl=1&amp;w=450" alt="" /></p>
+            
+            <blockquote>
+              <p>“The problem with object-oriented languages is they’ve got all this implicit environment that they carry around with them. You wanted a banana but what you got was a gorilla holding the banana and the entire jungle.” ~ <a href="https://en.wikipedia.org/wiki/Joe_Armstrong_" title="programmer">Joe Armstrong</a></p>
+            </blockquote>
+            
+            <h1 id="prototypalinheritance">Prototypal Inheritance</h1>
+            
+            <p><strong>Prototype-based programming</strong> acts as a paradigm of OOP in which inheritance is performed via a process of reusing existing objects via <a href="https://en.wikipedia.org/wiki/Delegation_" title="object-oriented_programming">delegation</a> that serve as <strong>prototypes</strong>. Some of the languages that support the prototypal inheritance:</p>
+            
+            <ul>
+            <li>JavaScript</li>
+            
+            <li>Lua</li>
+            
+            <li>Cecil</li>
+            
+            <li>NewtonScript</li>
+            </ul>
+            
+            <blockquote>
+              <p>In Prototypal Inheritance, Objects Inherit from Objects!</p>
+            </blockquote>
+            
+            <p>In <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>, Prototypal Inheritance &amp; Functional Programming are considered as its <a href="https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3">two-pillars</a>! JavaScript supports prototypal inheritance in 3 ways:</p>
+            
+            <ul>
+            <li><p><strong>Concatenative inheritance</strong>: The process of inheriting features directly from one object to another by copying the source objects properties i.e. <a href="https://medium.com/code-monkey/object-composition-in-javascript-2f9b9077b5e6">composition</a>. Concatenative inheritance is the secret sauce that enables object composition in JavaScript, which makes both prototype delegation and functional inheritance a lot more interesting.</p></li>
+            
+            <li><p><strong>Prototype delegation</strong>: An object may have a link to a prototype for delegation. If a property is not found on the object, the lookup is delegated to the delegate prototype, which may have a link to its own delegate prototype. This method tends to mimic the class-based inheritance by declaring initial state with a <a href="https://en.wikipedia.org/wiki/Constructor_" title="object-oriented_programming">constructor</a> function that needs to be instantiated with a <code>new</code> operator much like in classical OOP.</p></li>
+            
+            <li><p><strong>Functional inheritance</strong>: Any function other than constructor (or class) can create an object &amp; it’s called a factory function. These functions are generally used in <a href="https://en.wikipedia.org/wiki/Module_pattern">module pattern</a> in the form of <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">IIFE</a> that encloses private properties of an object with the help of <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Closures">closure</a>.</p></li>
+            </ul>
+            
+            <p><img src="https://i2.wp.com/pbiswas101.files.wordpress.com/2018/07/prototypal_delegation.png?ssl=1&amp;w=450" alt="" /></p>
+            
+            <blockquote>
+              <p>Prototypal Inheritance is completely different approach towards OOP which resolves the brittle classical inheritance taxonomies, and parent-child coupling. Still, in many developers community it is being applied to mimic class-based inheritance in a more subtle &amp; flexible way!</p>
+            </blockquote>
+            
+            <h3 id="classicalinheritancevsprototypalinheritance">Classical Inheritance vs Prototypal Inheritance</h3>
+            
+            <p>In Prototypal Inheritance, instances may be composed from many different source objects, allowing for easy selective inheritance delegation hierarchy. In other words, class taxonomies are not an automatic side-effect of prototypal OOP whereas classical inheritance creates parent/child object taxonomies as a side-effect; which serves as a critical distinction!</p>
+            
+            <p>Many Developers consider Prototypal Inheritance to be a superset of Classical Inheritance &amp; as a more pragmatic way of modelling objects!</p>
+            
+            <hr />
+    </body>
+</html>
